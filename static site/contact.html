@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="preconnect" href="https://fonts.google">
+    <title>Home page</title>
+    <style>
+        @media screen and (max-width:800px){
+      footer{
+         flex-direction: column;
+         min-height: 500px;
+      }
+      footer div{
+         width:100%;
+      }
+      footer div:nth-child(1){
+           width:100%;
+      }
+      footer div:nth-child(2){
+           width:100%;
+      }
+      footer div:nth-child(3){
+           width:100%;
+      }
+ }
+    footer div:nth-child(1){
+           width:39%;
+      }
+      footer div:nth-child(2){
+           width:28%;
+      }
+      footer div:nth-child(3){
+           width:28%;
+      }
+ main#contact{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+ }
+ main#contact h1{
+    margin-left: 500px;
+    margin-top:70px;
+ }
+#p01{
+    padding-left: 520px;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <div>
+            <h3 style="color:rgb(236, 224, 201); font-size:50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><i>Epipla-online</i></h3>
+        </div>
+        <nav>
+            <a href="home.html" style="color:rgb(222, 222, 222)">Aρχική</a>
+            <a href="furnitures.html" style="color:rgb(222, 222, 222)">Έπιπλα</a>
+            <a href="accessories.html" style="color:rgb(222, 222, 222)">Αξεσουάρ</a>
+            <a href="lighting.html" style="color:rgb(222, 222, 222)">Φωτισμός</a>
+            <a href="contact.html" style="color:rgb(204, 171, 171)">Επικοινωνία</a>
+        </nav>
+    </header>
+    <main id="contact">    
+         <form action="#">
+            <h1>Contact page</h1><br><br>
+            <p id="p01" style="color:black">Name:*</p>
+            <p id="p01"><input type="text" placeholder="Name" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Surname:*</p>
+            <p id="p01"><input type="text" placeholder="SurName" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Email:*</p>
+            <p id="p01"><input type="text" placeholder="Email Address" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Message</p>
+            <p id="p01"><textarea name="comments" rows="3" cols="30" style="text-align: center; width:200px; height:52px;"></textarea></p><br>
+            <p id="p01"><input type="submit" name="Send" value="Send" style="width:100px; height:35px; background-color:rgb(12, 90, 90); color:white; margin-left:50px;"></p>
+         </form>
+    </main>
+    <footer>
+        <div style="width:37%">
+            <h3>The company</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat quas, autem sequi quam culpa placeat obcaecati, quia quod modi provident excepturi distinctio tempore suscipit doloribus corporis voluptatum at pariatur dicta ab corrupti cumque repellendus exercitationem alias! Perferendis dolores quo ea blanditiis sunt deleniti, rerum tempore repudiandae eius porro officia eum, quam beatae quaerat consequatur minima ipsa adipisci commodi deserunt aliquam pariatur. </p>
+        </div>
+        <div style="width:28%">
+            <h3>Short links</h3>
+            <a href="">Πολιτική για cookies</a><br>
+            <a href="">Help center.</a><br>
+            <a href="">Delivery information</a><br>
+            <a href="">About us</a><br>
+            <a href="">Returns and Refunds</a>
+    </div>
+        <div style="width:20%">
+            <h3>newsletter</h3>
+            <p>Enter your email here </p>
+            <form>
+                <input type="mail" placeholder="Email">
+                <input type="submit" value="Aποστολή">
+            </form>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
