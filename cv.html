@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    border:none;
+    margin: 0px;
+    padding:0px;
+    text-decoration: none;
+    outline: none;
+    }
+    div#body{
+     font-family:Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     height:1700px;
+     display: flex;
+     flex-direction: row; /*row| row-reverse */
+     justify-content: space-between;
+     align-items:flex-start;
+    }
+    div#wrapper{
+     width:100%;
+     max-width: 800px;
+     height:1190px;
+     margin:auto;
+     display:flex;
+     border:solid thin;
+     position:relative;
+    }
+    div#personal{
+     font-family:Arial, Helvetica, sans-serif;
+     text-align: center;
+     width:280px;
+     height:95px;
+     max-width: 800px;
+     background-color: #003D73;
+     height:1190px;
+     padding-bottom:1.5px;
+     position:relative;
+    }
+    div#summary{
+     width:520px;
+     max-width: 800px;
+     height:1190px;
+     margin:auto;
+     position:relative; 
+    }
+    div#personal h2{
+     color:white;
+     font-size: 32px;
+     padding-top: 1px;
+     padding-bottom: 2px;
+    }
+    div#personal p{
+     color:rgb(244, 237, 237);
+     font-size: 16px;
+     padding-top: 1.5px;
+    }
+    div#headline{
+     text-align:left;
+     height:24px;
+     color:white;
+     background-color:#00315C;
+     font-size: 16px;
+     margin-top: 18px;
+     padding: 3px;
+     padding-left: 17px;
+    }
+    div#content{
+     text-align:left;
+     height:120px;
+     color:white;
+     font-size: 16px;
+     margin-top: 4px;
+     margin-bottom: 4px;
+     padding-top: 8px;
+     padding-bottom: 10px;
+     margin-left: 17px;
+    }
+    div#content01{
+     text-align:left;
+     height:100px;
+     color:white;
+     font-size: 16px;
+     margin-top: 4px;
+     margin-bottom: 4px;
+     padding-top: 8px;
+     padding-bottom: 10px;
+     margin-left: 17px;
+    }
+    div#content0{
+     text-align:left;
+     height:150px;
+     color:white;
+     font-size: 16px;
+     margin-top: 4px;
+     margin-bottom: 22px;
+     margin-right: 2px;
+     padding-top: 3px;
+     padding-bottom: 10px;
+     margin-left: 37px;
+    }
+    div#content0 a{
+     color:white;
+     text-decoration: underline;
+    }
+    div#content0 a:hover{
+     color:yellow;
+     text-decoration: underline;
+    }
+    div#content li{
+     margin-left: 37px;
+     padding-bottom: 10px;
+    }
+    div#content01 li{
+     margin-left: 37px;
+     padding-bottom: 10px;
+    }
+    div#content2 li{
+     font-size: 14px;
+     margin-left: 37px;
+     padding-bottom: 10px;
+    }
+    
+    div#summary p{
+     font-size: 18px;
+     font-family: Arial, Helvetica, sans-serif;
+     padding-left:4px;
+    }
+    div#headline2 {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size:18px;
+     border-top:gray solid 1.5px;
+     padding-top: 3px;
+     padding-left: 4px;
+     height:30px;
+     border-bottom: gray solid 1px;
+     color:#2F5496;
+    }
+    div#content2{
+     text-align:left;
+     height:350px;
+     font-size: 16px;
+     margin-top: 7px;
+     margin-bottom: 5px;
+     padding-top: 10px;
+     margin-left: 6px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between; /* space-between| space-evenly */
+     align-items:flex-start;
+    }
+    div#content3{
+     font-size: 16px;
+     margin-top: 7px;
+     margin-bottom: 7px;
+     margin-left: 200px;
+    }
+    div#content3 p{
+     font-size: 16px;
+     margin-top: 17px;
+     margin-bottom: 17px;
+    }
+    div#content4{
+     text-align:left;
+     height:140px;
+     font-size: 16px;
+     margin-top: 5px;
+     margin-bottom: 3px;
+     padding-top: 7px;
+     margin-left: 6px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between; /* space-between| space-evenly */
+     align-items:flex-start;
+    }
+    div#content2 p{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 16px;  
+    }
+    div#p2{
+     text-align: left;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;  
+    }
+    div#left{
+     text-align:left;
+     font-size: 14px;
+     width:240px;
+     height:270px;
+     margin-bottom: 8px;
+     padding-bottom: 5px;
+    }
+    div#right{
+     text-align:left;
+     font-size: 14px;
+     width:340px;
+     height:270px;
+     margin-bottom: 8px;
+     padding-bottom: 5px;
+    }
+    div#left p{
+     font-size: 16px;
+    }
+    div#right p{
+     font-size: 16px;  
+
+    }
+    p#u{
+        text-decoration: underline;
+        font-size: 24px;
+        padding-top:4px;
+    }
+    #p03{
+        padding-top:1px;
+        margin-top: 4px;
+    }
+    img{
+        border-radius:50%;
+        width: 140px;
+        height: 120px;
+    }
+    .stars {
+    margin-top:1px;
+   }
+    .clip-star1 {
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+   }
+   .clip-star0 {
+    background: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="personal">
+           <img src='images/foto.jpg' id='icon' alt='User Icon' />
+           <h2>NIKOLAOS</h2>
+           <h2>VOUTSINAS</h2>
+           <p> Web Developer</p>
+           <div id="headline">Contact</div>
+           <div id="content0"><p id="p03">Phone</p>6909272562<br><p id="p03">Email</p><a href="mailto:nickvoutsinas@yahoo.gr"><i>nickvoutsinas@yahoo.gr</i></a><br><p id="p03">
+            LinkedIn</p><a href="https://www.linkedin.com/in/nikolaos-voutsinas-374a2b253/"><p><i>https://www.linkedin.com/in/<br>nikolaos-voutsinas-374a2b253/</i></a><p id="p03">
+                Github</p><a href="https://github.com/nikosvoutsi/"><p><i>https://github.com/nikosvoutsi</i></a></div></p><br>
+            <div id="headline">Speaking languages</div>
+            <div id="content">
+                <ul>
+                    <li>Greek (Native)</li>
+                    <li>English (fluent, C2)</li>
+                    <li>Italian (B1)</li>
+                    <li>Turkish (B1)</li>
+                </ul></div>
+           <div id="headline">Programming languages</div>
+           <div id="content01">
+            <ul>
+                <li>PHP<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div></div></li>
+                <li>Python<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div>
+                    <div class='clip-star0'></div>
+                    <div class='clip-star0'></div></div></li>
+                <li>Java<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div>
+                    <div class='clip-star0'></div>
+                    <div class='clip-star0'></div></div></li>
+           </ul></div><br><br><br>
+           <div id="headline">User Interface</div>
+           <div id="content">
+            <ul>
+                <li>HTML<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div></div></li>
+                <li>CSS<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div></div></li>
+                <li>JavaScript<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div>
+                    <div class='clip-star0'></div></div></li>
+           </ul></div><br><br>
+           <div id="headline">Databases</div>
+           <div id="content">
+            <ul>
+                <li>MySQL<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div></div></li>
+                <li>OracleSQL<div class='stars'><div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star1'></div>
+                    <div class='clip-star0'></div>
+                    <div class='clip-star0'></div></div></li>
+           </ul></div>
+          </div>
+        <div id="summary">
+            <p>I am a military officer looking for a career shift towards web development. I am also a passionate professional, seeking for new opportunities and really eager to learn new technologies.<br></p>
+            <div id="headline2"><b>Work Experience</b></div>
+            <div id="content4">
+                <div id="left">
+                 <p> 09/2013 - Current</p>    
+                    <br><br><br>
+                 <p>08/2022 - Current</p>
+                 </div>  
+                 <div id="right"><p><b>Army Officer</b><br><i>Greek Army</i><br></p><br><br>
+                <p><b>Web Developer</b><br> <p><i>KEPYES, Greek Army</i></p>
+                </div>
+            </div>
+            <div id="headline2"><b>Education</b></div>
+            <div id="content2">
+                <div id="left">
+                <p> 10/2022 - 06/2023</p>    
+                    <br><br>
+                 <p>01/2021 – 07/2021 </p><br><br>
+                 <p> 09/2013 - 09/2019</p>    
+                    <br><br>
+                 <p>09/2002 – 06/2008 </p>
+                 </div>  
+                 <div id="right"><p><b>Web Development & Web Designer</b><br><i>IEK Intergraphics, Athens</i>
+                 </p><br><p><b>Military Coding School</b><br><i>SPHY, Athens</i>
+                 </p><br><p><b>Military Academy</b><br><i>SSE, Vari, Athens</i>
+                </p><br>
+                <p><b>High School Diploma
+                </b></p>
+                <p><i>5th Vyronas High School – Athens, Greece
+                     General Certificate of Secondary Education,
+                     Middle and High School</i> </p><br>
+               <p><ul><li>Graduation Grade:18.6/20</li>
+                <li>Nationwide University Entrance Examination
+                    Score : 18249 / 20000</li></ul></p><br>
+                </div>
+            </div>
+            <div id="headline2"><b>Seminars</b></div>
+            <div id="content4">
+                <div id="left">
+                 <p> 02/2023 – 12/2023</p>    
+                    <br><br>
+                 <p>01/2023 – 06/2023  </p>
+                 </div>  
+                 <div id="right"><p><b>Programming language: Python</b></i><br> IEK Eydokimos<br><br></p>
+                <p><b>Front End Development Certificate
+                </b></p>
+                <p><i>Workearly</i> </p><br>
+                </div>
+            </div>
+            <div id="headline2"><b>Interests and Hobbies</b></div>
+            <div id="content3">
+                <p>Travelling, music, sports</p>
+            </div>
+            <div id="headline2"><b>References</b></div>
+            <div id="content3">
+                <p id="p2"> Available upon request<br></p>
+            </div>
+            </div><br><br><br><br>
+            
+            </div><br><br><br><br>
+        </div>
+    </div>
+</body>
+</html>
