@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.google">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        window.addEventListener('load', init);
+        function init(){
+        let burger=document.querySelector("header nav#burger");
+        //burger.classList.add("display-none");
+        console.log(burger)
+        burger.addEventListener('click', onburgerclick);
+        //let dropDown=document.querySelector("header nav#drop-down");
+        let dropDown=document.querySelector("header nav#drop-down");
+        dropDown.setAttribute("style", "display:none")
+        function onburgerclick(){
+            
+             if(burger.textContent=='⛌'){
+               dropDown.setAttribute("style", "display:none")
+               burger.textContent='☰ ';
+            }else{
+                dropDown.setAttribute("style", "display:block");
+                burger.textContent='⛌';
+            } 
+        }
+    
+        
+                
+        //dropDown.classList.add("display-none");    
+    } 
+    
+    </script>
+    <style>
+        div#home00{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            display: flex;
+         }
+         div#home01{
+            flex-direction: column;
+            display: flex;
+            padding-left:20px;
+            width:550px;
+            height:380px;
+            justify-content: space-between;
+         }
+         div#home01 img{
+            width:500px;
+            height:160px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+         }
+         div#home02{
+            display: flex;
+            padding-right:50px;
+            padding-top:14px;
+            width:55%;
+            height:400px;
+            justify-content: space-between;
+         }
+         div#contact00{
+            flex-direction: row;
+            display: flex;
+            justify-content: space-evenly;
+         }
+         div#contact01{
+            flex-direction: column;
+            display: flex;
+            padding-left:40px;
+            padding-bottom:30px;
+            padding-top:50px;
+            width:310px;
+            height:380px;
+            justify-content: space-evenly;
+         }
+         div#contact02{
+            padding-top:50px;
+            flex-direction: column;
+            display: flex;
+            width:400px;
+            height:380px;
+            justify-content: space-evenly;
+         }
+        .display-none{
+            display:none;
+        }
+         header nav#burger{
+            color:white;
+            font-size:2.5rem;
+            display:none;
+            width:30px;
+            height:50px;
+         }
+         header nav#drop-down{
+            background-color: rgb(100, 173, 186);
+            display:none;
+         }
+         
+        section#home p {
+          color:#700806;
+          padding-bottom: 2px;
+        }
+        section.row{
+            width:100%;
+            display:flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        section.row div.card{
+            border:1px thin #464646;
+            border-radius: 4px;
+            padding: 10px;
+            margin:10px;
+            background-color: #464646;
+            justify-content: flex-start;
+            width:260px;
+            height:300px;
+        }
+        section#furnitures section.row div.card:hover{
+            box-shadow: 0 0 4px #FF0000;
+        }
+        section#accessories section.row div.card:hover{
+            box-shadow: 0 0 4px #FF0000;
+        }
+        section#lighting section.row div.card:hover{
+            box-shadow: 0 0 4px #FF0000;
+        }
+        section.row div.card div.product{
+            width:100%;
+            height:200px;
+        }
+        section.row div.card div.product img{
+            width:100%;
+            height:100%;
+        }
+        section.row div.card div.data{
+            width:100%;
+            height:60px;
+            text-align:center;
+            color:aliceblue;
+        }
+        section.row div.card div.data .span1{
+            padding:5px;
+            color:rgb(165, 165, 165);
+            text-decoration:line-through;
+        }
+        section.row div.card div.data .span2{
+            padding:5px;
+            color:#ff922d;
+        }
+        .checked {
+            color: orange;
+        }
+        section#home{
+            margin-top: 2px;
+        }
+        
+section#contact{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+ }
+ h1{
+    margin-left: 540px;
+    margin-top:10px;
+ }
+#p01{
+    padding-left: 520px;
+}
+header nav#top-menu a:hover{
+      color: rgb(114, 253, 225);
+      text-decoration: underline;
+ }
+ header nav#top-menu a{
+      color: rgba(255, 37, 4, 0.752);
+      padding: 5px 10px;
+ }
+ 
+ header nav#top-menu a:active{
+      padding: 5px 10px;
+      text-decoration:underline;
+ }
+ header nav#top-menu a:hover{
+      color: rgb(114, 253, 225);
+      text-decoration: underline;
+ }
+ 
+
+ /* drop-down menu */
+ header nav#drop-down a{
+      color: rgba(255, 37, 4, 0.752);
+
+ }
+ header nav#drop-down a:active{
+      padding: 5px 10px;
+ }
+ header nav#drop-down a:hover{
+      color: rgb(114, 253, 225);
+ }
+ div#social{
+    flex-direction: row;
+    display: flex;
+ }
+ div#social img:hover{
+    margin-top: 10px;
+
+ }
+ div#social img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    margin-top: 20px;
+    margin-left: 15px;
+ }
+
+
+ @media screen and (max-width:800px){
+    div#home00{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            display: flex;
+         }
+         div#home01{
+            flex-direction: column;
+            display: flex;
+            padding-left:50px;
+            width:550px;
+            height:380px;
+            justify-content: space-between;
+         }
+         div#home01 img{
+            width:500px;
+            height:160px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+         }
+         div#home02{
+            display: flex;
+            padding-top:14px;
+            padding-left:50px;
+            width:590px;
+            height:480px;
+            justify-content: space-between;
+         }
+         div#contact00{
+            flex-direction: column;
+         }
+         div#contact01{
+            padding-left:10px;
+         }
+         div#contact02{
+            padding-top:50px;
+            flex-direction: column;
+            display: flex;
+            width:400px;
+            height:380px;
+            justify-content: space-evenly;
+         }
+    header nav#drop-down{
+      background-color:#08596d;
+      position:absolute;
+      top:80px;
+      width:200px;
+      display:block;
+ }
+    header nav#drop-down a{
+      color: rgba(255, 37, 4, 0.752);
+      /* padding: 5px 10px; */
+      /* display:block; */
+      margin-right:810px;
+      width:200px;     
+ }
+ header nav#drop-down a:hover{
+      background-color: rgb(31, 137, 176);
+      
+      text-decoration: none; 
+      
+ }
+    header{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 10px;
+        height:80px;
+    }
+    h3{
+        margin-bottom: 10px;
+    }
+    header nav#burger{
+        display:flex; 
+        padding-bottom: 80px;
+        margin-left:100px;
+        margin-right:30px;
+        cursor: pointer;
+    }
+      footer{
+         flex-direction: column;
+         min-height:500px;
+
+      }
+      footer div{
+         width:100%;
+      }
+      section.row{
+        flex-direction: column;
+        display:block;
+        flex:nowrap;
+      }
+      section.row div.card{
+        width:40%;
+    }
+    h1{
+    margin-left: 180px;
+    margin-top:10px;
+    }
+    #p01{
+    padding-left: 220px;
+    }
+    section#home{
+        width:650px;
+        padding-left:15px;
+    }
+    header nav#top-menu{
+        display:none;
+    }
+ }
+
+ @media screen and (max-width:600px){
+    div#home00{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            display: flex;
+         }
+         div#home01{
+            flex-direction: column;
+            display: flex;
+            padding-left:20px;
+            width:550px;
+            height:380px;
+            justify-content: space-between;
+         }
+         div#home01 img{
+            width:500px;
+            height:160px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+         }
+         div#home02{
+            display: flex;
+            padding-top:14px;
+            padding-left:20px;
+            width:560px;
+            height:480px;
+            justify-content: space-between;
+         }
+         iframe{
+            width:550px;
+         }
+    header{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    header nav#burger{
+        display:flex; 
+        margin-bottom: 80px;
+        margin-left:100px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    footer{
+        flex-direction: column;
+        max-height:600px;
+      }
+      footer div{
+        width:100%;
+      }
+      section.row{
+        flex-direction: column;
+        display:flex;
+        flex:nowrap;
+      }
+    section.row div.card{
+        width:40%;
+    }
+    section#home{
+        width:550px;
+    }
+    h1{
+    margin-left: 180px;
+    margin-top:1px;
+    }
+    #p01{
+    padding-left: 160px;
+    }
+    
+ }
+ footer{
+        max-height:500px;
+        }
+
+        h3{
+       color:white;
+       font-size:1.5rem;
+       }
+       a#arrow{
+    position:fixed;
+    right:1rem;
+    bottom:1rem;
+    display:block;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background-color:rgb(100, 173, 186);
+    font-size:50px;
+    text-align: center;
+    animation: 10s;
+}  
+    </style>
+    <title>Home page</title>
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <nav id="burger">☰</nav><!--  ⛌ -->
+        <div>
+            <h3 style="color:rgb(236, 224, 201); font-size:50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><i>Epipla-online</i></h3>
+        </div>
+        
+        <nav id="top-menu">
+            <a href="#home" style="color:rgb(222, 222, 222)">Aρχική</a>
+            <a href="#furnitures"style="color:rgb(222, 222, 222)">Έπιπλα</a>
+            <a href="#accessories"style="color:rgb(222, 222, 222)">Αξεσουάρ</a>
+            <a href="#lighting"style="color:rgb(222, 222, 222)">Φωτισμός</a>
+            <a href="#contact"style="color:rgb(222, 222, 222)">Επικοινωνία</a>
+        </nav>
+       
+
+        <nav id="drop-down">
+            <a href="#home" style="color:rgb(222, 222, 222)">Aρχική</a>
+            <a href="#furnitures"style="color:rgb(222, 222, 222)">Έπιπλα</a>
+            <a href="#accessories"style="color:rgb(222, 222, 222)">Αξεσουάρ</a>
+            <a href="#lighting"style="color:rgb(222, 222, 222)">Φωτισμός</a>
+            <a href="#contact"style="color:rgb(222, 222, 222)">Επικοινωνία</a>
+        </nav>
+
+    </header>
+    <main>
+        <section id="home"><br>
+            <h1>Home page</h1><br>
+            <div id="home00">
+            <div id="home01"><img src="images/img1.jpg" alt=""><img src="images/img2.jpg" alt=""></div>
+            <div id="home02">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sit eum culpa soluta reprehenderit aliquam, commodi officia neque quaerat facilis eaque non dicta itaque repellendus nostrum possimus mollitia. Reprehenderit veritatis fuga minima odit laboriosam et iusto laudantium quod quaerat tempore odio molestias atque autem officia illum cum repudiandae quia accusamus veniam id cumque, perspiciatis tenetur dicta rem. Placeat possimus accusamus ducimus neque unde vitae, perferendis sapiente reprehenderit, illo veniam deserunt facilis nam hic enim cupiditate tempora laboriosam magni, asperiores nostrum? Amet deserunt, vitae ex illo dignissimos odit eaque officia asperiores fugit soluta consectetur ea quae quis tenetur nemo dolores repellendus voluptatem obcaecati dicta! Pariatur asperiores optio, quam voluptate et delectus voluptatum quia eos inventore ipsam officia, quidem ratione dolorum sunt vero laboriosam tempore officiis maxime quos? Consequuntur tempora aliquam blanditiis, ad illo corporis quisquam asperiores sequi sapiente odit! Expedita facere provident esse iure doloribus consectetur itaque nulla consequuntur eligendi veritatis quae perferendis, qui fugit nesciunt blanditiis suscipit quidem recusandae officia soluta officiis eius consequatur praesentium optio. Earum placeat neque, fugit vitae officiis, corporis beatae in quidem debitis sapiente facilis nihil autem laboriosam eligendi quis dolor nisi tempore, quam ea ex! Eligendi, dolorem officiis distinctio laudantium quaerat tenetur. Quidem dicta labore dolorem rerum! Nemo aperiam ad tenetur ipsam hic, similique impedit, expedita cupiditate, voluptas blanditiis vel dolorum ab. Mollitia porro totam delectus sed consequuntur iure tempore aut deserunt maiores non doloremque, eum minima vero ad error. </p></div></div></section>  
+        <br><section id="furnitures"><br>
+            <h1>Furnitures</h1>
+            <section class="row">
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f01.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$165.00</span><span class="span2">$112.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f02.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$130.00</span><span class="span2">$98.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f03.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$89.00</span><span class="span2">$65.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f04.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$76.00</span><span class="span2">$50.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f05.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$95.00</span><span class="span2">$76.00</span> </div>
+                </div></a>
+            </section>
+            <section class="row">
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f06.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$85.00</span><span class="span2">$58.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f07.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$143.00</span><span class="span2">$118.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f08.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$186.00</span><span class="span2">$150.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f09.jpeg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$90.00</span><span class="span2">$77.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f10.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$110.00</span><span class="span2">$84.00</span> </div>
+                    </div></a>
+            </section>
+            <section class="row">
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f11.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$122.00</span><span class="span2">$105.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f12.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$89.00</span><span class="span2">$69.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f13.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$110.00</span><span class="span2">$90.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f14.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$66.00</span><span class="span2">$50.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/f15.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$160.00</span><span class="span2">$132.00</span> </div>
+                    </div></a>
+            </section>
+ 
+        </section>
+        <br><section id="accessories">
+            <h1>Accessories</h1><br>
+            <section class="row">
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a01.jpeg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$13.00</span><span class="span2">$8.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a02.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$17.00</span><span class="span2">$12.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a03.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$14.50</span><span class="span2">$10.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a04.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$22.00</span><span class="span2">$18.00</span> </div>
+                </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a05.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$13.00</span><span class="span2">$9.00</span> </div>
+                </div></a>
+            </section>
+            <section class="row">
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a06.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$19.00</span><span class="span2">$16.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a07.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$11.50</span><span class="span2">$9.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a08.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$8.00</span><span class="span2">$5.50</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a09.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$36.00</span><span class="span2">$25.00</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a10.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$42.00</span><span class="span2">$34.00</span> </div>
+                    </div></a>
+            </section>
+            <section class="row">
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a11.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$11.00</span><span class="span2">$8.50</span> </div>
+                    </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/a12.jpeg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$16.00</span><span class="span2">$11.00</span> </div>
+                    </div></a>
+            </section></section>
+            <br><section id="lighting"><br><h1>Lighting</h1><section class="row">
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l01.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$13.00</span><span class="span2">$8.00</span> </div>
+                </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l02.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$17.00</span><span class="span2">$12.00</span> </div>
+            </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l03.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$14.50</span><span class="span2">$10.00</span> </div>
+            </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l04.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$22.00</span><span class="span2">$18.00</span> </div>
+            </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l05.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$13.00</span><span class="span2">$9.00</span> </div>
+            </div></a>
+        </section>
+        <section class="row">
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l06.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$19.00</span><span class="span2">$16.00</span> </div>
+            </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l07.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$11.50</span><span class="span2">$9.00</span> </div>
+            </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l08.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$8.00</span><span class="span2">$5.50</span> </div>
+            </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l09.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$36.00</span><span class="span2">$25.00</span> </div>
+                </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l10.jpeg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$42.00</span><span class="span2">$34.00</span> </div>
+            </div></a>
+        </section>
+        <section class="row">
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l11.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$11.00</span><span class="span2">$8.50</span> </div>
+            </div></a>
+            <a href=""><div class="card">
+                <div class="product"><img src="images/l12.jpg" alt=""></div>
+                <div class="data"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$16.00</span><span class="span2">$11.00</span> </div>
+            </div></a>
+                <a href=""><div class="card">
+                    <div class="product"><img src="images/l13.jpg" alt=""></div>
+                    <div class="data"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><a href="#"><h3>Product Name</h3></a>Fashion <br><span class="span1">$21.00</span><span class="span2">$17.00</span> </div>
+                </div></a>
+        </section>
+        <h1>Contact</h1>
+        <section id="contact">
+            <div id="contact00">
+            <div id="contact01"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.657902771881!2d23.72938171520041!3d37.985112207803134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3177c5093f%3A0xf067ad1d86aa4135!2zzpnOlc6aIElOVEVSR1JBUEhJQ1M!5e0!3m2!1sel!2sgr!4v1669887802277!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div id="contact02"><form action="home.html">
+            <p id="p01" style="color:black">Name:*</p>
+            <p id="p01"><input type="text" placeholder="Name" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Surname:*</p>
+            <p id="p01"><input type="text" placeholder="SurName" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Email:*</p>
+            <p id="p01"><input type="text" placeholder="Email Address" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Message</p>
+            <p id="p01"><textarea name="comments" rows="3" cols="30" style="text-align: center; width:200px; height:52px;"></textarea></p><br>
+            <p id="p01"><input type="submit" name="Send" value="Send" style="width:120px; height:55px; background-color:rgb(12, 90, 90); color:white; margin-left:50px;"></p><br>
+         </form></div></div></section>  
+    </main>
+    <footer>
+        <div style="width:37%">
+            <h3>The company</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cupiditate odio quibusdam, sunt, error ducimus voluptatibus vero illo, fugiat debitis atque fuga a enim eos pariatur tenetur suscipit labore ut rerum dolorem inventore nulla laborum natus. Vel, aliquid? Vel officiis neque exercitationem optio iure praesentium quaerat obcaecati voluptatem? Neque natus asperiores exercitationem et ut perspiciatis incidunt, ipsum nostrum quos libero quaerat, odio autem totam cumque beatae culpa eaque ab, laboriosam dolore numquam! Molestias quo nisi sapiente.</p>
+        </div>
+        <div style="width:28%">
+                <h3>Short links</h3>
+                <a href="">Πολιτική για cookies</a><br>
+                <a href="">Help center.</a><br>
+                <a href="">Delivery information</a><br>
+                <a href="">About us</a><br>
+                <a href="">Returns and Refunds</a>
+        </div>
+        <div style="width:20%">
+            <h3>newsletter</h3>
+            <p>Enter your email here </p>
+            <form>
+                <input type="mail" placeholder="Email">
+                <input type="submit" value="Aποστολή">
+            </form>
+            <div id="social">
+                <a href=""><img src="images/facebook.png" alt=""></a>
+                <a href=""><img src="images/insta.png" alt=""></a>
+                <a href=""><img src="images/twitter.jpg" alt=""></a>
+                <a href=""><img src="images/youtube.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <a id="arrow"  href="#home"><span>&#8657;</span></a>
+</body>
+
+</html>
