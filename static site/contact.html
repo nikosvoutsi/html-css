@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="preconnect" href="https://fonts.google">
+    <!-- <script src="js/main.js"></script> -->
+    <title>Home page</title>
+    <script>
+         window.addEventListener('load', init);
+        function init(){
+        let burger=document.querySelector("header nav#burger");
+        //burger.classList.add("display-none");
+        console.log(burger)
+        burger.addEventListener('click', onburgerclick);
+        //let dropDown=document.querySelector("header nav#drop-down");
+        let dropDown=document.querySelector("header nav#drop-down");
+        dropDown.setAttribute("style", "display:none")
+        function onburgerclick(){
+            
+             if(burger.textContent=='⛌'){
+               dropDown.setAttribute("style", "display:none")
+               burger.textContent='☰ ';
+            }else{
+                dropDown.setAttribute("style", "display:block");
+                burger.textContent='⛌';
+            } 
+        }
+   
+    } 
+    </script>
+    <style>
+         header nav#burger{
+            color:white;
+            font-size:2.5rem;
+            display:none;
+            width:30px;
+            height:50px;
+         }
+         .display-none{
+           display:none;
+        }
+        footer div:nth-child(1){
+           width:39%;
+      }
+      footer div:nth-child(2){
+           width:28%;
+      }
+      footer div:nth-child(3){
+           width:28%;
+      }
+      main#contact h1{
+      margin-left: 500px;
+      margin-top:100px;
+    }
+    
+    #p01{
+    padding-left: 520px;
+    }
+    div#social{
+    flex-direction: row;
+    display: flex;
+ }
+ div#social img:hover{
+    margin-top: 10px;
+
+ }
+ div#social img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    margin-top: 20px;
+    margin-left: 15px;
+ }
+        @media screen and (max-width:800px){
+            header nav#drop-down{
+           background-color:#08596d;
+           position:absolute;
+           top:80px;
+           width:200px;
+           display:block;
+        }
+        header nav#top-menu{
+           display:none;
+        }
+        header nav#drop-down a{
+         color: rgba(255, 37, 4, 0.752);
+         /* padding: 5px 10px; */
+         /* display:block; */
+         margin-right:810px;
+          width:200px;     
+      }
+      header nav#drop-down a:hover{
+      background-color: rgb(31, 137, 176);
+      
+      text-decoration: none; 
+      
+      }
+     header{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 10px;
+        height:80px;
+    }
+    h3{
+        margin-bottom: 10px;
+    }
+    header nav#burger{
+        display:flex; 
+        padding-bottom: 80px;
+        margin-left:100px;
+        margin-right:30px;
+        cursor: pointer;
+    }
+      footer{
+         flex-direction: column;
+         min-height: 500px;
+      }
+      footer div{
+         width:100%;
+      }
+      footer div:nth-child(1){
+           width:100%;
+      }
+      footer div:nth-child(2){
+           width:100%;
+      }
+      footer div:nth-child(3){
+           width:100%;
+      }
+      main#contact h1{
+      margin-left: 200px;
+      margin-top:60px;
+    }
+    
+    #p01{
+    padding-left: 220px;
+    margin-bottom:10px;
+    }
+ }
+    
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <nav id="burger">☰</nav><!--  ⛌ -->
+        <div>
+            <h3 style="color:rgb(236, 224, 201); font-size:50px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><i>Epipla-online</i></h3>
+        </div>
+
+        <nav id="top-menu">
+            <a href="home.html" style="color:rgb(222, 222, 222)">Aρχική</a>
+            <a href="furnitures.html" style="color:rgb(222, 222, 222)">Έπιπλα</a>
+            <a href="accessories.html" style="color:rgb(222, 222, 222)">Αξεσουάρ</a>
+            <a href="lighting.html" style="color:rgb(222, 222, 222)">Φωτισμός</a>
+            <a href="contact.html" style="color:rgb(204, 171, 171)">Επικοινωνία</a>
+        </nav>
+
+        <nav id="drop-down">
+            <a href="home.html" style="color:rgb(222, 222, 222)">Aρχική</a>
+            <a href="furnitures.html" style="color:rgb(222, 222, 222)">Έπιπλα</a>
+            <a href="accessories.html" style="color:rgb(222, 222, 222)">Αξεσουάρ</a>
+            <a href="lighting.html" style="color:rgb(222, 222, 222)">Φωτισμός</a>
+            <a href="contact.html" style="color:rgb(204, 171, 171)">Επικοινωνία</a>
+        </nav>
+    </header>
+    <main id="contact">    
+         <form action="#">
+            <h1>Contact page</h1><br><br>
+            <p id="p01" style="color:black">Name:*</p>
+            <p id="p01"><input type="text" placeholder="Name" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Surname:*</p>
+            <p id="p01"><input type="text" placeholder="SurName" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Email:*</p>
+            <p id="p01"><input type="text" placeholder="Email Address" style="text-align: center; width:200px; height:22px;"></p><br>
+            <p style="color:black" id="p01">Message</p>
+            <p id="p01"><textarea name="comments" rows="3" cols="30" style="text-align: center; width:200px; height:52px;"></textarea></p><br>
+            <p id="p01"><input type="submit" name="Send" value="Send" style="width:130px; height:55px; cursor: pointer; font-size:16px; background-color:rgb(12, 90, 90); color:white; margin-left:30px;"></p>
+         </form>
+    </main>
+    <footer>
+        <div style="width:37%">
+            <h3>The company</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat quas, autem sequi quam culpa placeat obcaecati, quia quod modi provident excepturi distinctio tempore suscipit doloribus corporis voluptatum at pariatur dicta ab corrupti cumque repellendus exercitationem alias! Perferendis dolores quo ea blanditiis sunt deleniti, rerum tempore repudiandae eius porro officia eum, quam beatae quaerat consequatur minima ipsa adipisci commodi deserunt aliquam pariatur. </p>
+        </div>
+        <div style="width:28%">
+            <h3>Short links</h3>
+            <a href="">Πολιτική για cookies</a><br>
+            <a href="">Help center.</a><br>
+            <a href="">Delivery information</a><br>
+            <a href="">About us</a><br>
+            <a href="">Returns and Refunds</a>
+    </div>
+        <div style="width:20%">
+            <h3>newsletter</h3>
+            <p>Enter your email here </p>
+            <form>
+                <input type="mail" placeholder="Email">
+                <input type="submit" value="Aποστολή">
+            </form>
+            <div id="social">
+                <a href=""><img src="images/facebook.png" alt=""></a>
+                <a href=""><img src="images/insta.png" alt=""></a>
+                <a href=""><img src="images/twitter.jpg" alt=""></a>
+                <a href=""><img src="images/youtube.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
